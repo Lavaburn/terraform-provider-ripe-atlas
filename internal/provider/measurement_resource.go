@@ -8,7 +8,6 @@ import (
 	"fmt"
 	"strconv"
 	"time"
-	//"net/http"
 
 	"github.com/keltia/ripe-atlas" // PR https://github.com/keltia/ripe-atlas/pull/13
 
@@ -105,7 +104,7 @@ func (r *MeasurementResource) Schema(ctx context.Context, req resource.SchemaReq
 				Computed: true,
 				Default:  int64default.StaticInt64(300),
 				Validators: []validator.Int64{
-					int64validator.Between(30, 3600), // 30 sec - 1 hour ?
+					int64validator.Between(60, 3600), // 60 sec - 1 hour
 				},
 				PlanModifiers: []planmodifier.Int64{
 					int64planmodifier.RequiresReplace(),
@@ -336,7 +335,6 @@ func (r *MeasurementResource) Update(ctx context.Context, req resource.UpdateReq
 		"Update not supported!",
 		"Update is currently not supported!",
 	)
-	return
 
 	// tflog.Info(ctx, "Fetching RIPE Atlas measurement")
 	// _, err := r.client.GetMeasurement(int(data.ID.ValueInt64()))

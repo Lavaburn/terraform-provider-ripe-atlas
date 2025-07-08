@@ -2,7 +2,7 @@ module terraform-provider-ripe-atlas
 
 go 1.22.7
 
-replace github.com/keltia/ripe-atlas => /home/nicolas/git/ripe-atlas
+replace github.com/keltia/ripe-atlas => /home/nicolas/projects/oss-forks/ripe-atlas
 
 require (
 	github.com/hashicorp/terraform-plugin-framework v1.12.0

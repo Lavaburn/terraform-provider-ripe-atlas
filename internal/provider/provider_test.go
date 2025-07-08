@@ -4,8 +4,6 @@
 package provider
 
 import (
-	//"testing"
-
 	"github.com/hashicorp/terraform-plugin-framework/providerserver"
 	"github.com/hashicorp/terraform-plugin-go/tfprotov6"
 )

@@ -6,7 +6,6 @@ package provider
 import (
 	"context"
 	"os"
-	//"net/http"
 
 	"github.com/keltia/ripe-atlas" // PR https://github.com/keltia/ripe-atlas/pull/13
 
@@ -17,7 +16,6 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/provider/schema"
 	"github.com/hashicorp/terraform-plugin-framework/resource"
 	"github.com/hashicorp/terraform-plugin-framework/types"
-	//"github.com/hashicorp/terraform-plugin-log/tflog"
 )
 
 // Ensure ScaffoldingProvider satisfies various provider interfaces.
@@ -99,6 +97,7 @@ func (p *RipeAtlasProvider) Configure(ctx context.Context, req provider.Configur
 
 	// Create a new HashiCups client using the configuration values
 	client, err := atlas.NewClient(atlas.Config{
+		Level: 3,
 		APIKey: api_key,
 	})
 	if err != nil {

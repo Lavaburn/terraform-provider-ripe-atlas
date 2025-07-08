@@ -6,7 +6,6 @@ package provider
 import (
 	"context"
 	"fmt"
-	//"net/http"
 
 	"github.com/keltia/ripe-atlas" // PR https://github.com/keltia/ripe-atlas/pull/13
 

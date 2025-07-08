@@ -17,20 +17,20 @@ resource "ripe-atlas_measurement" "test" {
   target      = "105.235.209.25"
 
   probe_set = [
-    { 
-        type   = "country"
-        value  = "BE"
-        number = 1
+    {
+      type   = "country"
+      value  = "BE"
+      number = 1
     },
-    { 
-        type   = "country"
-        value  = "NL"
-        number = 1
+    {
+      type   = "country"
+      value  = "NL"
+      number = 1
     },
-    { 
-        type   = "country"
-        value  = "SS"
-        number = 1
+    {
+      type   = "country"
+      value  = "SS"
+      number = 1
     },
   ]
 }
@@ -44,7 +44,7 @@ resource "ripe-atlas_measurement" "test" {
 #}
 
 data "ripe-atlas_credits" "mine" {
-    
+
 }
 
 output "my_credits" {
